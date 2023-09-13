@@ -5,14 +5,23 @@
   1. 타입 안정성
   2. 코드 실행 전에 검증(런타임 에러 방지)
 
-- [타입스크립트로 블록체인 만들기](#----------------)
+---
+
+- [타입스크립트로 블록체인 만들기](#타입스크립트로-블록체인-만들기)
 - [OVERVIEW OF TYPESCRIPT](#overview-of-typescript)
   - [- 2.0 How Typescript Works](#--20-how-typescript-works)
   - [- 2.1 Implicit Types vs Explicit Types](#--21-implicit-types-vs-explicit-types)
   - [- 2.2 Rypes of TS part One](#--22-rypes-of-ts-part-one)
   - [- 2.3 Types of TS part Two](#--23-types-of-ts-part-two)
   - [- 2.4 Types of TS part Three](#--24-types-of-ts-part-three)
+- [3 FUNCTION](#3-function)
   - [- 3.0 Call Signatures](#--30-call-signatures)
+  - [- 3.1 Overloading](#--31-overloading)
+  - [- 3.2 Polymorphism](#--32-polymorphism)
+  - [- 3.3 Generics Recap](#--33-generics-recap)
+  - [- 3.4 Conclusions](#--34-conclusions)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 <br>
 
@@ -110,6 +119,8 @@ Typescripta에서 중요한 포인트는 Type Checker와 소통하는 것이다.
   마지막 else문 안에 있는 name의 타입은 never가 된다. (절대 실행되면 안되는 코드... ) 직접 never을 쓰진 않지만 마우스를 올렸을 때 뜨면 무슨 의미인지 알아야 한다.
 
 <br>
+
+# 3 FUNCTION
 
 ### - 3.0 Call Signatures
 
