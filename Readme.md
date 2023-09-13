@@ -117,3 +117,26 @@ Typescripta에서 중요한 포인트는 Type Checker와 소통하는 것이다.
 
 ![](md-img/3.0-1.png)
 a와 b의 type을 number로 지정해줫더니 function add의 return type 또한 자동으로 number로 type 지정된 것을 확인할 수 있다. 그러니까 우리는 항상 모든 타입을 지정해주는 것은 아니다.(참고)
+
+근데 이번에는 `const add = (a:number, b:number)`에서 `:number`타입을 작성하지 않는 법을 공부해봄.(call signiture)
+
+- call signiture : 함수 위에 마우스를 올렸을 때 보게 되는 걸 의미
+  (함수를 어떻게 호출하는지, return 타입이 뭔지)
+
+  ```Typescript
+  // call signature
+  type Add = (a:number, b:number) => number;
+
+  const add:Add = (a, b) => a + b;
+  ```
+
+  Add의 타입을 타입스크립트가 알기때문에 a와 b의 타입을 매번 지정해줄 필요가 없다.
+  ![](md-img/3.0-2.png)
+
+<br>
+
+### - 3.1 Overloading
+
+- overloading : 외부 라이브러리를 사용하면서 많이 보게 될 것. 복잡하지만 어떻게 생긴 건지 알아야 한다.
+
+  오버로딩은 함수가 서로 다른 call signature를 여러개 가지고 있을 때 발생.
