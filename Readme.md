@@ -1,8 +1,18 @@
 # 타입스크립트로 블록체인 만들기
 
 - Typescript를 쓰는 이유
+
   1. 타입 안정성
   2. 코드 실행 전에 검증(런타임 에러 방지)
+
+- [타입스크립트로 블록체인 만들기](#----------------)
+- [OVERVIEW OF TYPESCRIPT](#overview-of-typescript)
+  - [- 2.0 How Typescript Works](#--20-how-typescript-works)
+  - [- 2.1 Implicit Types vs Explicit Types](#--21-implicit-types-vs-explicit-types)
+  - [- 2.2 Rypes of TS part One](#--22-rypes-of-ts-part-one)
+  - [- 2.3 Types of TS part Two](#--23-types-of-ts-part-two)
+  - [- 2.4 Types of TS part Three](#--24-types-of-ts-part-three)
+  - [- 3.0 Call Signatures](#--30-call-signatures)
 
 <br>
 
