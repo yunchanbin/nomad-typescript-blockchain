@@ -181,3 +181,41 @@ if에서 string을 한번 걸렀기 때문에 else안에서는 반드시 Config 
 코드 오류 없음
 
 <br>
+
+### - 3.2 Polymorphism
+
+- ploymorphism : 다형성. 여러가지 형태를 가지고 있음.
+
+![](md-img/3.2-1.png)
+배열을 받아서 forEach로 각 요소들을 뿌려주는 코드.
+
+array 안의 type이 boolean도 될 수 있게 하려면,
+![](md-img/3.2-2.png)
+이렇게 써주면
+![](md-img/3.2-3.png)
+잘 작동함.
+![](md-img/3.2-4.png)
+string은 안됨.
+
+![](md-img/3.2-5.png)
+그렇다고 다시 또 추가해주면 되냐? => 되긴 하지만 이렇게 하지 않는다.
+
+- concrete type : 이때까지 배운 type들. number, string, boolean, void, unknown, ...
+- generic : 타입의 placeholder 같은 거.
+  ![](md-img/3.2-6.png)
+  이런게 가능하도록 하고싶다.
+  ![](md-img/3.2-7.png)
+  모든 가능성을 따져서 이렇게 만들면 너무 지저분하다.
+
+  이처럼 들어올 타입을 모를 때 generic을 사용.
+
+  먼저, generic을 사용하겠다고 선언해야 함.
+  ![](md-img/3.2-8.png)
+  `< 이름 >`를 앞에다 붙여주면 해당 call signature가 제네릭을 받는다는 것을 알려주는 것.
+
+  ![](md-img/3.2-9.png)
+  이런 걸 알아서 해준다.
+
+<br>
+
+### - 3.3 Generics Recap
