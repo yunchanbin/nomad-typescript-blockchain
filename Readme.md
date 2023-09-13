@@ -140,3 +140,44 @@ a와 b의 type을 number로 지정해줫더니 function add의 return type 또�
 - overloading : 외부 라이브러리를 사용하면서 많이 보게 될 것. 복잡하지만 어떻게 생긴 건지 알아야 한다.
 
   오버로딩은 함수가 서로 다른 call signature를 여러개 가지고 있을 때 발생.
+  ![](md-img/3.1-1.png)
+  call signature를 두개 가지고 있다.
+  따라서 마지막 줄에 오류가 남.(b가 string이 되면 안되니까)
+
+```typescript
+type Config ={
+  path: string,
+  state: object
+}
+
+ // 함수의 parameter을 쓸 때는 콤마(',') 없나 봄...
+type Push = {
+  (path:string):void
+  (config):config:void
+}
+
+const push:Push =(config) => {
+  if(typeof config === "string") console.log(config)
+  else{
+    console.log(config.path, config.state)
+  }
+}
+```
+
+![](md-img/3.1-2.png)
+if에서 string을 한번 걸렀기 때문에 else안에서는 반드시 Config 타입 객체라는 것을 타입스크립트가 알고 있음.
+
+파라미터 개수가 다르게 가지는 경우
+![](md-img/3.1-3.png)
+
+![](md-img/3.1-4.png)
+오류가 생김. c 파라미터는 옵션 같은 것. (a, b를 부를 수도 있지만 a, b, c를 부를 수도 있기 때문)
+
+![](md-img/3.1-5.png)
+물음표를 이용해서 c가 number일 수도 있다고 알려줘야 함.
+그리고 if에서 c 가 있으면 a+b+c를 return, 없으면 a+b를 retrun
+
+![](md-img/3.1-6.png)
+코드 오류 없음
+
+<br>
