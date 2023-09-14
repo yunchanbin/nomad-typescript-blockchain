@@ -20,6 +20,7 @@
   - [- 3.2 Polymorphism](#--32-polymorphism)
   - [- 3.3 Generics Recap](#--33-generics-recap)
   - [- 3.4 Conclusions](#--34-conclusions)
+- [4 CLASSES AND INTERFACES](#4-classes-and-interfaces)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -283,3 +284,41 @@ useState<number>( ~~~ )
 이런 식으로 사용할 수 있다는 뜻. (제네릭은 이미 react에서 작성되었으니, 우리는 사용하면 된다.)
 
 <br>
+
+# 4 CLASSES AND INTERFACES
+
+![](md-img/4.0-1.png)
+private 부분은 자바스크립트에서는 보이지 않는다. 타입스크립트에서 보호하는 용도로만 쓰인다.
+
+![](md-img/4.0-2.png)
+firstName은 private이기 때문에 에러. nico.nickname만 가능.
+
+- abstract(추상)
+  ![](md-img/4.0-3.png)
+  User라는 추상 클래스를 Player가 상속(inherit)받고 있다.
+
+  추상 클래스 안의 메소드랑 abstract method(추상 메소드)
+
+  - 추상클래스 안의 메소드
+    ![](md-img/4.0-4.png)
+    firstName이랑 lastName은 private 지만 메소드 안에서 사용하면 다른 곳에서 호출해서 return 받을 수 있다.
+
+  - 추상 메소드:
+
+    우리는 메소드를 구현하는게 아니라 call signature만 적어둬야 함.
+    ![](md-img/4.0-5.png)
+    getNickName이라는 함수의 call signature(argument는 가지지 않고, void 함수라는 call signature)을 적는 방법이다.
+
+    ![](md-img/4.0-6.png)
+    추상 메소드는 추상 클래스를 상속받는 모든 것들이 구현을 해야 하는 메소드이기 때문에 밑에 상속받은 class에 오류가 뜬다.
+    ![](md-img/4.0-8.png)
+    추상 메소드를 구현해주기 위해서 nickName을 찍으려고 하면 nickName을 사용할 수 없다.
+    ![](md-img/4.0-7.png)
+    추상클래스 안에서 private property로 만들었기 때문. 상속은 받고 있지만 Player은 추상클래스 안의 private property를 사용할 수 없다.
+
+> - protected vs private
+>
+>   : private는 인스턴스 밖에서 접근할 수 없고, 다른 자식 클래스에서도 접근할 수 없다. 만약 필드가 외부로부터는 보호되지만 다른 자식 클래스에서 사용하려면 protected를 써라.
+>   즉, protected는 상속받고 있는 클래스 밖에서는 접근할 수 있지만, 다른 곳에서는 private와 마찬가지로 보호할 수 있는 property이다.
+>   ![](md-img/4.0-9.png)
+>   주석 참고.
