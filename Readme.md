@@ -364,5 +364,8 @@ type Words = {
 작성 코드: https://huchu.link/3umhT75
 
 - 참고
+- https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors
+
   - Object["key"] vs Object.key : https://medium.com/sjk5766/javascript-object-key-vs-object-key-%EC%B0%A8%EC%9D%B4-3c21eb49b763
+
   - Object 속성 추가 : https://goddino.tistory.com/328
