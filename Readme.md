@@ -21,6 +21,8 @@
   - [- 3.3 Generics Recap](#--33-generics-recap)
   - [- 3.4 Conclusions](#--34-conclusions)
 - [4 CLASSES AND INTERFACES](#4-classes-and-interfaces)
+  - [- 4.0 Classes](#--40-classes)
+  - [- 4.1 Recap](#--41-recap)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -287,6 +289,8 @@ useState<number>( ~~~ )
 
 # 4 CLASSES AND INTERFACES
 
+### - 4.0 Classes
+
 ![](md-img/4.0-1.png)
 private 부분은 자바스크립트에서는 보이지 않는다. 타입스크립트에서 보호하는 용도로만 쓰인다.
 
@@ -316,9 +320,43 @@ firstName은 private이기 때문에 에러. nico.nickname만 가능.
     ![](md-img/4.0-7.png)
     추상클래스 안에서 private property로 만들었기 때문. 상속은 받고 있지만 Player은 추상클래스 안의 private property를 사용할 수 없다.
 
-> - protected vs private
->
->   : private는 인스턴스 밖에서 접근할 수 없고, 다른 자식 클래스에서도 접근할 수 없다. 만약 필드가 외부로부터는 보호되지만 다른 자식 클래스에서 사용하려면 protected를 써라.
->   즉, protected는 상속받고 있는 클래스 밖에서는 접근할 수 있지만, 다른 곳에서는 private와 마찬가지로 보호할 수 있는 property이다.
->   ![](md-img/4.0-9.png)
->   주석 참고.
+<br>
+
+- protected vs private
+
+  : private는 인스턴스 밖에서 접근할 수 없고, 다른 자식 클래스에서도 접근할 수 없다. 만약 필드가 외부로부터는 보호되지만 다른 자식 클래스에서 사용하려면 protected를 써라.
+  즉, protected는 상속받고 있는 클래스 밖에서는 접근할 수 있지만, 다른 곳에서는 private와 마찬가지로 보호할 수 있는 property이다.
+  ![](md-img/4.0-9.png)
+  주석 참고.
+
+<br>
+
+### - 4.1 Recap
+
+단어를 넣으면 설명이 나오는 사전을 만들어보자
+
+![](md-img/4.1-1.png)
+Words 타입이 string만을 property로 가지는 오브젝트라고 적어준 것. whatever 자리에는 그냥 내가 이름을 준 거라서 아무 글자나 넣어도 된다.(이름은 아직 안 정해준 거임)
+
+![](md-img/4.1-2.png)
+dict에서 property의 이름은 potato, 결과는 food가 되도록 적어둔 것.
+
+```typescript
+type Words = {
+  [key: string]: string;
+};
+```
+
+원래는 constructor이용해서 property 썼는데 지금은 다르다. 이렇게 쓰는 것은, property의 이름은 모르지만 타입만 알 때 이렇게 씀.
+
+이해를 돕기 위해서 property를 number 타입으로 바꿔주면,
+![](md-img/4.1-3.png)
+이렇게 오류 발생. ㅇㅋ?
+
+![](md-img/4.1-4.png)
+다시 돌아와서 맨 아래에 Dict class에 또 오류가 있음. 우리가 constructor에 포함시켜준게 아니기 때문.
+
+![](md-img/4.1-5.png)
+수동으로 초기화(initialized)해줘야 한다.
+
+![](md-img/4.1-6.png)
