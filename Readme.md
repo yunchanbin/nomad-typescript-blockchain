@@ -360,3 +360,9 @@ type Words = {
 수동으로 초기화(initialized)해줘야 한다.
 
 ![](md-img/4.1-6.png)
+
+작성 코드: https://huchu.link/3umhT75
+
+- 참고
+  - Object["key"] vs Object.key : https://medium.com/sjk5766/javascript-object-key-vs-object-key-%EC%B0%A8%EC%9D%B4-3c21eb49b763
+  - Object 속성 추가 : https://goddino.tistory.com/328
