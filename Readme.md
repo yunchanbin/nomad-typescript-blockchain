@@ -28,6 +28,7 @@
   - [- 4.3 Interfaces part Two](#--43-interfaces-part-two)
     - [Type 사용하기](#type-사용하기)
     - [Interface 사용하기](#interface-사용하기)
+  - [- 4.4 Recap](#--44-recap)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -446,3 +447,10 @@ User라는 추상 클래스는 설계도만 만든 것. 이를 상속받는 클�
 
 ![](md-img/4.3-6.png)
 interface를 type 처럼 사용할 수 있다.
+
+![](md-img/4.3-7.png)
+return도 interface로 정할 수 있는데 type이랑 다르게 new User로 인스턴스 생성 안하고 바로 object의 property만 적어주면 된다.
+
+<br>
+
+### - 4.4 Recap
