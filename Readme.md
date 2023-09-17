@@ -26,6 +26,8 @@
   - [- 4.2 Interfaces](#--42-interfaces)
     - [인터페이스](#인터페이스)
   - [- 4.3 Interfaces part Two](#--43-interfaces-part-two)
+    - [Type 사용하기](#type-사용하기)
+    - [Interface 사용하기](#interface-사용하기)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -417,3 +419,30 @@ interface는 property 중첩이 가능
 <br>
 
 ### - 4.3 Interfaces part Two
+
+인터페이스와 타입은 상속하는 방법이 조금 다르다.(문법)
+
+#### Type 사용하기
+
+![](md-img/4.3-1.png)
+User라는 추상 클래스는 설계도만 만든 것. 이를 상속받는 클래스들은 이 설계도를 따른다.
+
+![](md-img/4.3-2.png)
+상속받는 클래스 에는 추상 메소드를 반드시 포함해야 함.
+
+![](md-img/4.3-3.png)
+자바스크립트로 바뀌면서 추상클래스가 그냥 클래스로 바뀌는데 그대로 남아있음.
+
+밑에 보면 알겠지만 인터페이스를 쓰면 컴파일하면서 사라짐.
+
+#### Interface 사용하기
+
+![](md-img/4.3-4.png)
+컴파일 된 코드를 보면 class 하나밖에 없다.
+(파일 사이즈를 줄일 수 있음)
+
+![](md-img/4.3-5.png)
+하나 이상의 인터페이스를 동시에 상속할 수도 있다.
+
+![](md-img/4.3-6.png)
+interface를 type 처럼 사용할 수 있다.
