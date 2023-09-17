@@ -29,6 +29,7 @@
     - [Type 사용하기](#type-사용하기)
     - [Interface 사용하기](#interface-사용하기)
   - [- 4.4 Recap](#--44-recap)
+  - [- 4.5 Polymorphism](#--45-polymorphism)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -456,3 +457,12 @@ return도 interface로 정할 수 있는데 type이랑 다르게 new User로 인
 <br>
 
 ### - 4.4 Recap
+
+https://huchu.link/GWBJy8C
+
+### - 4.5 Polymorphism
+
+![](md-img/4.5-1.png)
+Storage라는 인터페이스는 js에서 이미 지정된 interface가 있어서 한번 더 쓰면 좀 이상해짐.
+
+코드: https://huchu.link/3d84kbb
