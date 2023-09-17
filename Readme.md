@@ -23,6 +23,9 @@
 - [4 CLASSES AND INTERFACES](#4-classes-and-interfaces)
   - [- 4.0 Classes](#--40-classes)
   - [- 4.1 Recap](#--41-recap)
+  - [- 4.2 Interfaces](#--42-interfaces)
+    - [인터페이스](#인터페이스)
+  - [- 4.3 Interfaces part Two](#--43-interfaces-part-two)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -369,3 +372,48 @@ type Words = {
   - Object["key"] vs Object.key : https://medium.com/sjk5766/javascript-object-key-vs-object-key-%EC%B0%A8%EC%9D%B4-3c21eb49b763
 
   - Object 속성 추가 : https://goddino.tistory.com/328
+
+<br>
+
+### - 4.2 Interfaces
+
+![](md-img/4.2-1.png)
+readonly는 public이지만 내용을 수정할 수 없도록 함.
+
+![](md-img/4.2-2.png)
+static 을 사용하면 인스턴스 객체를 생성하지 않아도 해당 메소드를 사용할 수 있다.
+
+#### 인터페이스
+
+![](md-img/4.2-3.png)
+
+![](md-img/4.2-4.png)
+
+![](md-img/4.2-5.png)
+
+![](md-img/4.2-6.png)
+이게 type으로 오브젝트의 모양을 설명한 것이고,
+
+여기서부터는 인터페이스
+![](md-img/4.2-7.png)
+4번째 줄 말곤 변한게 없음.
+type으로는 활용할 수 있는게 많았는데, 인터페이스는 object 모양을 특정해주는 것 외에는 아무 기능이 없다.
+
+```typescript
+interface Hello = string
+```
+
+이런 거 불가능. object 아니니까
+
+인터페이스 쓰면 클래스 다루는 느낌.
+![](md-img/4.2-8.png)
+인터페이스 사용
+![](md-img/4.2-9.png)
+타입 사용
+
+![](md-img/4.2-10.png)
+interface는 property 중첩이 가능
+
+<br>
+
+### - 4.3 Interfaces part Two
