@@ -451,6 +451,8 @@ interface를 type 처럼 사용할 수 있다.
 ![](md-img/4.3-7.png)
 return도 interface로 정할 수 있는데 type이랑 다르게 new User로 인스턴스 생성 안하고 바로 object의 property만 적어주면 된다.
 
+코드 : https://huchu.link/7TbmCd9
+
 <br>
 
 ### - 4.4 Recap
